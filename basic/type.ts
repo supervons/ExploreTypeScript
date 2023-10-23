@@ -7,12 +7,12 @@ x = 100; // no error.
 /**
  * 2. Type inference defaults to any if no type is specified or cannot be recommended.
  */
-function add(x: any, y) {
-  //  Parameter y implicitly has an any type.
-  return x + y;
-}
+// function add(x: any, y) {
+//   //  Parameter y implicitly has an any type.
+//   return x + y;
+// }
 
-add("c", [1, 2, 3]); // no error.
+// add("c", [1, 2, 3]); // no error.
 
 /**
  * 3. Any type pollution,if the type is set to any that can be value for every type variable.
@@ -25,3 +25,13 @@ console.log(tempString); // print 123
 
 let tempUnknown: unknown = 123;
 // tempString = tempUnknown; // error: Type unknown is not assignable to type string
+
+/**
+ * 4. Never type is null, excludes value.
+ */
+let x2: never;
+function f(): never {
+  throw new Error("Error");
+}
+
+let v1: number = f(); // no error.

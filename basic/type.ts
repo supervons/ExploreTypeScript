@@ -1,14 +1,27 @@
 /**
- * 1. 一旦值设置成 any，将会关闭对其类型检查。
+ * 1. If the type is set to any,type verification is disabled.
  */
-let x:any = 'hello';
-x = 100; // 不报错
+let x: any = "hello";
+x = 100; // no error.
 
 /**
- * 2. 类型推断，如果没有指定类型或无法推荐，则为 any。
+ * 2. Type inference defaults to any if no type is specified or cannot be recommended.
  */
-function add(x: any, y) { //  Parameter y implicitly has an any type.
-    return x + y;
+function add(x: any, y) {
+  //  Parameter y implicitly has an any type.
+  return x + y;
 }
 
-add('c', [1, 2, 3]) // 不报错
+add("c", [1, 2, 3]); // no error.
+
+/**
+ * 3. Any type pollution,if the type is set to any that can be value for every type variable.
+ * To prevent this, use unknown.
+ */
+let tempAny: any = 123;
+let tempString: string = "nihao";
+tempString = tempAny;
+console.log(tempString); // print 123
+
+let tempUnknown: unknown = 123;
+// tempString = tempUnknown; // error: Type unknown is not assignable to type string

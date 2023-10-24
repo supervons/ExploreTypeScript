@@ -4,6 +4,7 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "isolatedModules": true,
+    "strictNullChecks": false,
     "lib": [
       "es2020",
       "dom"

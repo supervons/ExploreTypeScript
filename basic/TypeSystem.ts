@@ -1,11 +1,11 @@
 /**
- * 1、es2020 new feature bigint, need config target to es2020.
+ * 1. es2020 new feature bigint, need config target to es2020.
  */
 const xInt: bigint = 123n;
 console.log(xInt);
 
 /**
- * 2、wrapper object.
+ * 2. wrapper object.
  */
 const s = new String("123");
 const s1 = "123";
@@ -27,7 +27,7 @@ const n2: Number = 1;
 Math.abs(n1); // 1
 // Math.abs(n2); // 报错
 
-// 3、Object
+// 3. Object
 let obj: {};
 obj = "hi";
 obj = 1;
@@ -35,3 +35,8 @@ obj = () => 1;
 // obj = undefined; // error
 // obj = null; // error
 console.log(typeof obj);
+
+// 4. undefined & null, if you setting strictNullChecks is false, this code no errors.
+let obj1: object = {};
+obj1 = undefined;
+obj1.toString();

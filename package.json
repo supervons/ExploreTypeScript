@@ -1,0 +1,20 @@
+{
+  "name": "exploretypescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --noEmit false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supervons/ExploreTypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supervons/ExploreTypeScript/issues"
+  },
+  "homepage": "https://github.com/supervons/ExploreTypeScript#readme"
+}

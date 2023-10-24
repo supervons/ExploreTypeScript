@@ -39,4 +39,29 @@ console.log(typeof obj);
 // 4. undefined & null, if you setting strictNullChecks is false, this code no errors.
 let obj1: object = {};
 obj1 = undefined;
-obj1.toString();
+// obj1.toString(); // error : Cannot read property 'toString' of undefined
+
+// 5. value type.
+let h: "hello";
+
+h = "hello"; // 正确
+// h = "world"; // 报错
+const h2 = "https";
+console.log(typeof h2); // string
+
+// const x:5 = 4 + 1; // error
+
+// 6. union types.
+let nameString: string | null;
+
+nameString = "John";
+nameString = null;
+
+let rainbowColor: "赤" | "橙" | "黄" | "绿" | "青" | "蓝" | "紫";
+
+// 7. subtype
+let a: "hi" = "hi";
+let b: string = "hello";
+
+b = a; // success
+// a = b; // error

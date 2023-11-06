@@ -16,7 +16,7 @@ console.log(s1); // [ 'a', 'b' ]
  * 3. Unlimited member need use（...）.
  */
 const s3: [string, ...number[]] = ["A", 1, 2];
-s3[6] = 7; // success
+s3[6] = 7; // correct
 console.log(s3); // [ 'A', 1, 2, <3 empty items>, 7 ]
 
 const arr: [number, number] = [1, 2];

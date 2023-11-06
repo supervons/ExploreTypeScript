@@ -15,10 +15,10 @@ console.log(s == s1); // true
 console.log(s === s1); // false
 console.log(s1.charAt(2)); // 3
 
-const s3: String = "hello"; // success
-const s4: String = new String("hello"); // success
+const s3: String = "hello"; // correct
+const s4: String = new String("hello"); // correct
 
-const s5: string = "hello"; // success, recommend use.
+const s5: string = "hello"; // correct, recommend use.
 // const s6: string = new String("hello"); // wrong TS2322: Type String is not assignable to type string.
 
 const n1: number = 1;
@@ -63,5 +63,5 @@ let rainbowColor: "赤" | "橙" | "黄" | "绿" | "青" | "蓝" | "紫";
 let a: "hi" = "hi";
 let b: string = "hello";
 
-b = a; // success
+b = a; // correct
 // a = b; // error

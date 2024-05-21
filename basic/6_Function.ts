@@ -92,3 +92,13 @@ function sum({ a, b, c }: { a: number; b: number; c: number }) {
   console.log(a + b + c);
 }
 sum({ a: 34, b: 4, c: 5 });
+
+// 9. StrictNullChecks
+
+function fNullChecks():void {
+  return undefined; // 正确
+}
+
+// function f():void {
+//   return null; // 报错
+// }
